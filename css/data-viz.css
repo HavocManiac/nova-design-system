@@ -1,0 +1,98 @@
+/*
+ * Nova Design System — Data Visualization
+ * Source: Playbook §25.7, §25.11
+ */
+
+/* Stat box — §25.11.1 */
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.01);
+}
+.stat-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.stat-value {
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.02;
+}
+
+/* Tabbed filter pills — §25.11.2 */
+.filter-pill {
+  padding: 5px 12px;
+  border-radius: 16px;
+  font-size: 0.78em;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.6);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.filter-pill.active {
+  color: white;
+  /* inline style sets the dimension-specific fill color */
+}
+
+/* Horizontal bar chart (inline) — §25.11.3 */
+.inline-bar {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.06);
+  height: 22px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.inline-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+}
+.inline-bar-label {
+  position: absolute;
+  left: 8px;
+  top: 3px;
+  font-size: 0.73em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Metric summary card (color-accented) — §25.11.5 */
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 6px;
+  border-left: 3px solid var(--accent-indigo);
+}
+.metric-row .label { color: rgba(255, 255, 255, 0.7); font-size: 0.85em; }
+.metric-row .value { font-weight: 700; font-size: 1.1em; }
+
+/* Progress bar — generic */
+.nv-progress {
+  background: var(--surface);
+  border-radius: 9999px;
+  height: 8px;
+  overflow: hidden;
+}
+.nv-progress-fill {
+  height: 100%;
+  background: var(--gradient-hero);
+  border-radius: 9999px;
+}
+
+/* Empty state — §25.11.8 */
+.empty-state {
+  color: rgba(255, 255, 255, 0.35);
+  padding: 20px;
+  text-align: center;
+  font-size: 0.85em;
+}

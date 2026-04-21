@@ -1,0 +1,59 @@
+/*
+ * Nova Design System — Layout Patterns
+ * Source: Playbook §25.4
+ */
+
+.nv-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+}
+
+.nv-navbar {
+  width: 100%;
+  padding: 20px 32px;       /* py-5 px-8 */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nv-navbar-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(240, 239, 233, 0.2), transparent);
+  margin: 0 32px;
+}
+.nv-navbar .nv-nav-logo   { justify-self: start; }
+.nv-navbar .nv-nav-links  { display: flex; gap: 24px; justify-self: center; }
+.nv-navbar .nv-nav-action { justify-self: end; }
+
+.nv-content {
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nv-card {
+  border-radius: 12px;       /* rounded-lg to rounded-xl */
+  padding: 22px;             /* 20-24px */
+}
+.nv-card-sm { border-radius: 8px;  padding: 16px; }
+.nv-card-lg { border-radius: 16px; padding: 28px; }
+
+.nv-grid { display: grid; gap: 16px; }
+.nv-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.nv-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.nv-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.nv-grid-5 { grid-template-columns: repeat(5, 1fr); }
+
+/* Sidebar */
+.nv-sidebar { width: 240px; border-right: 1px solid var(--border-dim); padding: 16px; }
+.nv-sidebar-item[data-page].active {
+  background: rgba(99, 102, 241, 0.08);
+  border-left: 3px solid var(--accent-indigo);
+}

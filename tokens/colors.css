@@ -1,0 +1,50 @@
+/*
+ * Nova Design System — Color Palette
+ * Source: Playbook §25.1 (v4.27.0)
+ * DO NOT HARDCODE — always reference these CSS variables.
+ */
+
+:root {
+  /* Surfaces (dark theme) */
+  --background: 260 87% 3%;        /* Deep dark blue-purple (#050208) */
+  --bg-raised: #0f1117;            /* Slightly elevated surfaces */
+  --surface: #1a1d27;              /* Cards, panels */
+  --surface2: #232633;             /* Nested surfaces */
+  --surface3: #2a2d3a;             /* Deep nested */
+  --border: #2e3245;               /* Standard borders */
+  --border-dim: #252838;           /* Subtle borders */
+
+  /* Text */
+  --foreground: 40 6% 95%;         /* Off-white text (#f0efe9) */
+  --hero-sub: 40 6% 82%;           /* Secondary text */
+  --text-dim: #8b8fa3;             /* Dimmed / tertiary text */
+
+  /* Accent palette */
+  --accent-indigo: #6366f1;        /* Primary accent */
+  --accent-purple: #a855f7;        /* Secondary accent */
+  --accent-amber: #fcd34d;         /* Highlight accent */
+  --accent-green: #22c55e;         /* Success / active */
+  --accent-red: #ef4444;           /* Error / critical */
+
+  /* Hero gradient */
+  --gradient-hero: linear-gradient(to left, #6366f1, #a855f7, #fcd34d);
+}
+
+/*
+ * Dashboard category / section colors — Playbook §25.11.10
+ * Use these for badges, borders, accents on data rows.
+ */
+:root {
+  --cat-content-performance: #06b6d4;    /* cyan */
+  --cat-audience-insight:    #f59e0b;    /* amber */
+  --cat-connection-tracking: #ef4444;    /* red */
+  --cat-confidence-bucket:   #8b5cf6;    /* purple */
+  --cat-role-type:           #06b6d4;    /* cyan */
+  --cat-seniority:           #f59e0b;    /* amber */
+  --cat-send-time:           #10b981;    /* green */
+  --cat-send-day:            #ef4444;    /* red */
+  --cat-industry:            #3b82f6;    /* blue */
+  --cat-calibration:         #ec4899;    /* pink */
+}
+/* Badge backgrounds use the category color at 15-25% opacity (e.g. #06b6d425).
+   Summary card borders use 44% opacity (e.g. #06b6d444). */

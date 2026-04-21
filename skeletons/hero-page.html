@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova — Hero</title>
+  <link rel="stylesheet" href="../tokens/colors.css">
+  <link rel="stylesheet" href="../tokens/typography.css">
+  <link rel="stylesheet" href="../css/liquid-glass.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/interactive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/backgrounds.css">
+</head>
+<body>
+  <div class="nv-page nv-hero" style="min-height: 100vh">
+    <!-- Ambient fallback orbs (no video) -->
+    <div class="nv-hero-ambient">
+      <div class="nv-orb indigo"></div>
+      <div class="nv-orb purple"></div>
+      <div class="nv-orb amber"></div>
+    </div>
+
+    <div class="nv-hero-overlay"></div>
+
+    <div class="nv-hero-content" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 32px; text-align: center">
+      <h1 class="nv-heading-hero nv-fade-in-hero" style="background: var(--gradient-hero); -webkit-background-clip: text; background-clip: text; color: transparent">
+        Hero headline
+      </h1>
+      <p class="nv-fade-in" style="margin-top: 24px; font-size: var(--fs-body-xl); color: hsl(var(--hero-sub)); max-width: 600px">
+        Subheadline or tagline. Keep it short. Two lines max.
+      </p>
+      <div class="nv-fade-in" style="margin-top: 40px; display: flex; gap: 16px">
+        <button class="nv-btn-primary">Primary action</button>
+        <button class="nv-btn-secondary">Secondary</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      requestAnimationFrame(() => document.documentElement.classList.add('ready'));
+    });
+  </script>
+</body>
+</html>

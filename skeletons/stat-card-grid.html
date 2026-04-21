@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Stat Card Grid — §25.11.1</title>
+  <link rel="stylesheet" href="../tokens/colors.css">
+  <link rel="stylesheet" href="../tokens/typography.css">
+  <link rel="stylesheet" href="../css/liquid-glass.css">
+  <link rel="stylesheet" href="../css/data-viz.css">
+  <link rel="stylesheet" href="../css/layout.css">
+</head>
+<body style="background: hsl(var(--background)); color: hsl(var(--foreground)); padding: 32px">
+  <h2 class="nv-heading-section">Reference: §25.11.1 Stat Cards Row (5-card variant)</h2>
+
+  <section class="nv-grid" style="grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 16px">
+    <div class="stat-box liquid-glass">
+      <div class="stat-label">Connections</div>
+      <div class="stat-value">&mdash;</div>
+    </div>
+    <div class="stat-box liquid-glass">
+      <div class="stat-label">Acceptance %</div>
+      <div class="stat-value">Calibrating</div>
+    </div>
+    <div class="stat-box liquid-glass">
+      <div class="stat-label">Posts (7d)</div>
+      <div class="stat-value">&mdash;</div>
+    </div>
+    <div class="stat-box liquid-glass">
+      <div class="stat-label">Avg impressions</div>
+      <div class="stat-value">&mdash;</div>
+    </div>
+    <div class="stat-box liquid-glass">
+      <div class="stat-label">Active cohorts</div>
+      <div class="stat-value">&mdash;</div>
+    </div>
+  </section>
+
+  <p style="margin-top: 24px; color: var(--text-dim); font-size: 0.85em">
+    §25.11.1 notes: default placeholder is <code>&amp;mdash;</code> (em dash).
+    If a metric cannot be calculated yet, show a descriptive word like "Calibrating" — never raw fallback text like "Tracking (518 predictions)".
+  </p>
+</body>
+</html>

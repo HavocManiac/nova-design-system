@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova — {Page title}</title>
+  <link rel="stylesheet" href="../tokens/colors.css">
+  <link rel="stylesheet" href="../tokens/typography.css">
+  <link rel="stylesheet" href="../css/liquid-glass.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/interactive.css">
+  <link rel="stylesheet" href="../css/data-viz.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/backgrounds.css">
+</head>
+<body class="nv-data-page">
+  <div class="nv-page">
+    <!-- §25.4 Navbar: logo left, nav center, action right -->
+    <nav class="nv-navbar">
+      <div class="nv-nav-logo">Nova</div>
+      <div class="nv-nav-links">
+        <a href="#" class="nv-transition">Overview</a>
+        <a href="#" class="nv-transition">Pipeline</a>
+        <a href="#" class="nv-transition">Memory</a>
+        <a href="#" class="nv-transition">Learning</a>
+      </div>
+      <div class="nv-nav-action">
+        <button class="nv-btn-primary">New</button>
+      </div>
+    </nav>
+    <div class="nv-navbar-divider"></div>
+
+    <main class="nv-content">
+      <h1 class="nv-heading-page">Page title</h1>
+
+      <!-- §25.11.1 Stat cards row -->
+      <section class="nv-grid nv-grid-4" style="margin-top: 24px">
+        <div class="stat-box liquid-glass">
+          <div class="stat-label">Metric A</div>
+          <div class="stat-value">&mdash;</div>
+        </div>
+        <div class="stat-box liquid-glass">
+          <div class="stat-label">Metric B</div>
+          <div class="stat-value">&mdash;</div>
+        </div>
+        <div class="stat-box liquid-glass">
+          <div class="stat-label">Metric C</div>
+          <div class="stat-value">&mdash;</div>
+        </div>
+        <div class="stat-box liquid-glass">
+          <div class="stat-label">Metric D</div>
+          <div class="stat-value">&mdash;</div>
+        </div>
+      </section>
+
+      <!-- §25.11.4 Side-by-side glass panels -->
+      <section class="nv-grid nv-grid-2" style="margin-top: 24px">
+        <div class="glass-card-gradient">
+          <div class="nv-heading-section">Panel A</div>
+          <div class="empty-state">Data will appear once Nova starts emitting signals.</div>
+        </div>
+        <div class="glass-card-gradient">
+          <div class="nv-heading-section">Panel B</div>
+          <div class="empty-state">Data will appear once Nova starts emitting signals.</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // §25.8 — unhide once fonts/styles loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      requestAnimationFrame(() => document.documentElement.classList.add('ready'));
+    });
+  </script>
+</body>
+</html>

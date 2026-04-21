@@ -1,0 +1,52 @@
+/*
+ * Nova Design System — Typography
+ * Source: Playbook §25.2 (v4.27.0)
+ */
+
+/* Font loads */
+@import url('https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap');
+/* Geist Sans — install via @fontsource/geist-sans or CDN equivalent */
+
+:root {
+  --font-headline: 'General Sans', system-ui, -apple-system, sans-serif;
+  --font-body:     'Geist Sans', system-ui, -apple-system, sans-serif;
+
+  /* Headline sizes */
+  --fs-hero:       clamp(80px, 14vw, 220px);
+  --fs-page-title: clamp(32px, 5vw, 48px);
+  --fs-section:    clamp(20px, 2.5vw, 24px);
+
+  /* Body sizes */
+  --fs-body:       14px;
+  --fs-body-lg:    16px;    /* 16-18px range */
+  --fs-body-xl:    18px;
+  --fs-body-sm:    12px;
+
+  /* Letter spacing */
+  --tracking-headline: -0.024em;
+  --tracking-body:     normal;
+
+  /* Line height */
+  --lh-headline: 1.02;
+  --lh-body:     1.5;
+}
+
+.nv-heading,
+.nv-heading-hero,
+.nv-heading-page,
+.nv-heading-section {
+  font-family: var(--font-headline);
+  font-weight: 600;
+  letter-spacing: var(--tracking-headline);
+  line-height: var(--lh-headline);
+}
+.nv-heading-hero    { font-size: var(--fs-hero); }
+.nv-heading-page    { font-size: var(--fs-page-title); }
+.nv-heading-section { font-size: var(--fs-section); }
+
+body, .nv-body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  letter-spacing: var(--tracking-body);
+}

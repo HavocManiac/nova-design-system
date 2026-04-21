@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Setup helper — not part of the public repo
+SETUP.sh
+
+# Editor
+.vscode/
+.idea/
+*.swp

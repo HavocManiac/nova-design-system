@@ -1,0 +1,56 @@
+/*
+ * Nova Design System — Interactive Elements
+ * Source: Playbook §25.5, §25.8
+ */
+
+/* Primary button */
+.nv-btn-primary {
+  background: var(--gradient-hero);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 24px;        /* py-3 px-6 */
+  font-family: var(--font-body);
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.nv-btn-primary:hover { opacity: 0.92; }
+.nv-btn-primary:active { transform: translateY(1px); }
+
+/* Secondary / heroSecondary button */
+.nv-btn-secondary {
+  background: rgba(240, 239, 233, 0.08);
+  border: 1px solid rgba(240, 239, 233, 0.12);
+  color: hsl(var(--foreground));
+  border-radius: 9999px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.nv-btn-secondary:hover { background: rgba(240, 239, 233, 0.14); }
+
+/* Status indicators — pulse dot */
+.nv-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  animation: nv-pulse 2s ease-in-out infinite;
+}
+.nv-status-dot.active   { background: var(--accent-green); }
+.nv-status-dot.warning  { background: var(--accent-amber); }
+.nv-status-dot.critical { background: var(--accent-red); }
+
+@keyframes nv-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* Global transition baseline */
+.nv-transition,
+.nv-btn-primary,
+.nv-btn-secondary,
+a, button {
+  transition: all 0.2s ease;
+}

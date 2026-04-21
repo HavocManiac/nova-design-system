@@ -1,0 +1,41 @@
+/*
+ * Nova Design System — Animations
+ * Source: Playbook §25.8
+ */
+
+/* Marquee */
+@keyframes nv-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.nv-marquee { animation: nv-marquee 20s linear infinite; }
+
+/* Fade — UI (200-300ms) and hero (500ms) */
+@keyframes nv-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.nv-fade-in      { animation: nv-fade-in 250ms ease both; }
+.nv-fade-in-hero { animation: nv-fade-in 500ms ease both; }
+
+/* Orb drift (hero background) */
+@keyframes nv-orb-drift {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(20px, -15px) scale(1.05); }
+  100% { transform: translate(-10px, 10px) scale(0.98); }
+}
+.nv-orb {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  filter: blur(120px);
+  animation: nv-orb-drift 12s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+.nv-orb.indigo { background: radial-gradient(circle, #6366f1 0%, transparent 70%); }
+.nv-orb.purple { background: radial-gradient(circle, #a855f7 0%, transparent 70%); }
+.nv-orb.amber  { background: radial-gradient(circle, #fcd34d 0%, transparent 70%); }
+
+/* NO jarring transitions, NO flash of unstyled content */
+html { opacity: 0; transition: opacity 200ms ease; }
+html.ready { opacity: 1; }
