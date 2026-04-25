@@ -2,7 +2,7 @@
 
 **Purpose:** sanitized mirror of the §25 Nova Design System, safe to link into Claude Design (`claude.ai/design`) or share with partner teams. Contains ONLY the design-system surface from Playbook §25 — no agent-side code, no secrets, no customer data, no brand IP beyond what §25 already specifies.
 
-**Status:** DRAFT. Built 2026-04-21 as part of epic `4F-ClaudeDesignBridge` (ADR-057). Not yet pushed to a GitHub repo — Chris pushes when ready, then links the repo in Claude Design as the design-system source.
+**Status:** Sanitization-audited 2026-04-24, ready for Chris to publish. Built 2026-04-21 as part of epic `4F-ClaudeDesignBridge` (ADR-057). Sanitization receipt at `../nova-design-system-sanitization-receipt-2026-04-24.md`.
 
 ## What's in here
 
@@ -18,8 +18,7 @@ nova-design-system-draft/
 │   ├── interactive.css             (Playbook §25.5 buttons, status, transitions)
 │   ├── backgrounds.css             (Playbook §25.6 hero + data page treatments)
 │   ├── data-viz.css                (Playbook §25.7 charts, stat cards, tables)
-│   ├── animations.css              (Playbook §25.8 marquee, fade, pulse, orb)
-│   └── patterns.css                (Playbook §25.11 dashboard component patterns)
+│   └── animations.css              (Playbook §25.8 marquee, fade, pulse, orb)
 └── skeletons/
     ├── dashboard-page.html         (generic Nova dashboard page shell)
     ├── hero-page.html              (hero-style landing page shell)
