@@ -90,8 +90,10 @@
 }
 
 /* Empty state — §25.11.8 */
+/* Alpha bumped 0.35 → 0.55 (2026-05-07) per §55.4 cond2 axe finding;
+   composited contrast ratio rises from 3.05:1 to ~5.0:1, clearing WCAG 2.1 AA (4.5:1). */
 .empty-state {
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.55);
   padding: 20px;
   text-align: center;
   font-size: 0.85em;
